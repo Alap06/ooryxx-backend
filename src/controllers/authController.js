@@ -36,9 +36,7 @@ exports.register = async (req, res) => {
       });
     }
 
-    // Hasher le mot de passe
-    const salt = await bcrypt.genSalt(10);
-    const hashedPassword = await bcrypt.hash(password, salt);
+    // Le mot de passe sera hashé automatiquement par le middleware pre('save') du modèle User
 
     // Prepare initial address if provided
     const addresses = [];
@@ -53,10 +51,10 @@ exports.register = async (req, res) => {
       });
     }
 
-    // Créer l'utilisateur
+    // Créer l'utilisateur (le password sera hashé par le middleware pre-save)
     const user = await User.create({
       email: email.toLowerCase(),
-      password: hashedPassword,
+      password: password,
       firstName,
       lastName,
       phoneNumber: phoneNumber || null,
