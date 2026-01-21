@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{subject}}</title>
+    <style type="text/css">
+        /* Reset */
+        body,
+        table,
+        td,
+        p,
+        a,
+        li,
+        blockquote {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        table,
+        td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        img {
+            -ms-interpolation-mode: bicubic;
+            border: 0;
+            height: auto;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+        }
+
+        body {
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+            background-color: #f5f5f5;
+        }
+
+        /* Responsive */
+        @media only screen and (max-width: 620px) {
+            .email-container {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+            .fluid {
+                width: 100% !important;
+                max-width: 100% !important;
+                height: auto !important;
+            }
+
+            .stack-column {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+            .padding-mobile {
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+            }
+
+            .header-padding {
+                padding: 24px 20px !important;
+            }
+
+            .content-padding {
+                padding: 24px 20px !important;
+            }
+
+            .contact-cell {
+                display: block !important;
+                width: 100% !important;
+                border: none !important;
+                padding: 12px 0 !important;
+            }
+
+            .contact-divider {
+                display: none !important;
+            }
+
+            .btn-full {
+                display: block !important;
+                width: 100% !important;
+                text-align: center !important;
+            }
+
+            .font-mobile {
+                font-size: 14px !important;
+                line-height: 22px !important;
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            .header-padding {
+                padding: 20px 16px !important;
+            }
+
+            .content-padding {
+                padding: 20px 16px !important;
+            }
+
+            .contact-icon {
+                font-size: 16px !important;
+            }
+
+            .contact-label {
+                font-size: 11px !important;
+            }
+
+            .contact-value {
+                font-size: 11px !important;
+            }
+        }
+    </style>
+</head>
+
+<body
+    style="margin: 0; padding: 0; background-color: #f5f5f5; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;">
+
+    <!-- Preview text -->
+    <div style="display: none; max-height: 0; overflow: hidden;">
+        {{subject}} - Information de Ooryxx
+    </div>
+
+    <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color: #f5f5f5;">
+        <tr>
+            <td align="center" style="padding: 40px 16px;">
+
+                <table role="presentation" cellpadding="0" cellspacing="0" width="600" class="email-container"
+                    style="margin: 0 auto; background-color: #ffffff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+
+                    <!-- Header -->
+                    <tr>
+                        <td class="header-padding"
+                            style="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); padding: 32px; text-align: center;">
+                            <img src="{{logoUrl}}" alt="Ooryxx" height="40" style="height: 40px; max-width: 150px;">
+                        </td>
+                    </tr>
+
+                    <!-- Body -->
+                    <tr>
+                        <td class="content-padding" style="padding: 40px 32px;">
+                            <p class="font-mobile"
+                                style="color: #374151; font-size: 16px; line-height: 1.6; margin: 0 0 20px;">
+                                Bonjour <strong>{{name}}</strong>,
+                            </p>
+
+                            <!-- Main Content -->
+                            <div class="font-mobile" style="color: #4b5563; font-size: 15px; line-height: 1.7;">
+                                {{content}}
+                            </div>
+
+                            <!-- Info Box -->
+                            {{#if infoBox}}
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%"
+                                style="margin: 24px 0;">
+                                <tr>
+                                    <td
+                                        style="background-color: #eff6ff; border-left: 4px solid #3b82f6; padding: 16px; border-radius: 8px;">
+                                        <p class="font-mobile" style="color: #1e40af; font-size: 14px; margin: 0;">
+                                            ℹ️ {{infoBox}}
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                            {{/if}}
+
+                            <!-- CTA Button -->
+                            {{#if ctaLink}}
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%"
+                                style="margin: 32px 0;">
+                                <tr>
+                                    <td align="center">
+                                        <a href="{{ctaLink}}" class="btn-full"
+                                            style="display: inline-block; background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: #ffffff; text-decoration: none; padding: 16px 40px; border-radius: 12px; font-size: 16px; font-weight: 600; box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);">
+                                            {{ctaText}}
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                            {{/if}}
+
+                            <!-- Signature -->
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%"
+                                style="margin-top: 32px;">
+                                <tr>
+                                    <td style="border-top: 1px solid #e5e7eb; padding-top: 24px;">
+                                        <p class="font-mobile"
+                                            style="color: #374151; font-size: 15px; line-height: 1.6; margin: 0;">
+                                            Cordialement,<br>
+                                            <strong>L'équipe Ooryxx</strong>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Contact Info -->
+                    <tr>
+                        <td style="background-color: #f0f9ff; padding: 24px 32px;">
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td class="contact-cell" style="width: 33.33%; text-align: center; padding: 8px;">
+                                        <p class="contact-icon" style="color: #3b82f6; font-size: 20px; margin: 0;">📧
+                                        </p>
+                                        <p class="contact-label"
+                                            style="color: #1e40af; font-size: 13px; margin: 8px 0 0;">Email</p>
+                                        <a class="contact-value" href="mailto:{{supportEmail}}"
+                                            style="color: #374151; font-size: 12px; text-decoration: none;">{{supportEmail}}</a>
+                                    </td>
+                                    <td class="contact-cell contact-divider"
+                                        style="width: 33.33%; text-align: center; padding: 8px; border-left: 1px solid #bfdbfe; border-right: 1px solid #bfdbfe;">
+                                        <p class="contact-icon" style="color: #3b82f6; font-size: 20px; margin: 0;">📞
+                                        </p>
+                                        <p class="contact-label"
+                                            style="color: #1e40af; font-size: 13px; margin: 8px 0 0;">Téléphone</p>
+                                        <a class="contact-value" href="tel:{{supportPhone}}"
+                                            style="color: #374151; font-size: 12px; text-decoration: none;">{{supportPhone}}</a>
+                                    </td>
+                                    <td class="contact-cell" style="width: 33.33%; text-align: center; padding: 8px;">
+                                        <p class="contact-icon" style="color: #3b82f6; font-size: 20px; margin: 0;">💬
+                                        </p>
+                                        <p class="contact-label"
+                                            style="color: #1e40af; font-size: 13px; margin: 8px 0 0;">Chat</p>
+                                        <a class="contact-value" href="{{chatUrl}}"
+                                            style="color: #374151; font-size: 12px; text-decoration: none;">Ouvrir le
+                                            chat</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Footer -->
+                    <tr>
+                        <td class="content-padding"
+                            style="background-color: #f9fafb; padding: 24px 32px; border-top: 1px solid #e5e7eb;">
+                            <p
+                                style="color: #9ca3af; font-size: 12px; line-height: 1.6; margin: 0; text-align: center;">
+                                Cet email a été envoyé à {{email}}<br>
+                                <a href="{{preferencesUrl}}" style="color: #3b82f6; text-decoration: underline;">Gérer
+                                    mes préférences</a> •
+                                <a href="{{unsubscribeUrl}}" style="color: #3b82f6; text-decoration: underline;">Se
+                                    désabonner</a>
+                            </p>
+                            <p style="color: #9ca3af; font-size: 12px; margin: 16px 0 0; text-align: center;">
+                                © {{year}} Ooryxx. Tous droits réservés.<br>
+                                {{companyAddress}}
+                            </p>
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

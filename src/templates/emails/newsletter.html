@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Newsletter Ooryxx</title>
+    <style type="text/css">
+        /* Reset styles */
+        body,
+        table,
+        td,
+        p,
+        a,
+        li,
+        blockquote {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        table,
+        td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        img {
+            -ms-interpolation-mode: bicubic;
+            border: 0;
+            height: auto;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+        }
+
+        body {
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+            background-color: #f5f5f5;
+        }
+
+        /* Responsive */
+        @media only screen and (max-width: 620px) {
+            .email-container {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+            .fluid {
+                width: 100% !important;
+                max-width: 100% !important;
+                height: auto !important;
+            }
+
+            .stack-column {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+            .stack-column-center {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                text-align: center !important;
+            }
+
+            .center-on-narrow {
+                text-align: center !important;
+                display: block !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+
+            .padding-mobile {
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+            }
+
+            .header-padding {
+                padding: 24px 20px !important;
+            }
+
+            .content-padding {
+                padding: 24px 20px !important;
+            }
+
+            .product-col {
+                width: 50% !important;
+                display: inline-block !important;
+                vertical-align: top !important;
+            }
+
+            .hide-mobile {
+                display: none !important;
+            }
+
+            .btn-full {
+                display: block !important;
+                width: 100% !important;
+                text-align: center !important;
+            }
+
+            .font-mobile {
+                font-size: 14px !important;
+                line-height: 22px !important;
+            }
+
+            .title-mobile {
+                font-size: 24px !important;
+            }
+
+            .subtitle-mobile {
+                font-size: 14px !important;
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            .header-padding {
+                padding: 20px 16px !important;
+            }
+
+            .content-padding {
+                padding: 20px 16px !important;
+            }
+
+            .product-col {
+                width: 100% !important;
+                display: block !important;
+                padding: 8px 0 !important;
+            }
+
+            .title-mobile {
+                font-size: 22px !important;
+            }
+
+            .social-icon {
+                width: 28px !important;
+                height: 28px !important;
+            }
+        }
+    </style>
+</head>
+
+<body
+    style="margin: 0; padding: 0; background-color: #f5f5f5; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;">
+
+    <!-- Preview text -->
+    <div style="display: none; max-height: 0; overflow: hidden;">
+        {{subject}} - Découvrez les dernières actualités Ooryxx
+    </div>
+
+    <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color: #f5f5f5;">
+        <tr>
+            <td align="center" style="padding: 40px 16px;">
+
+                <table role="presentation" cellpadding="0" cellspacing="0" width="600" class="email-container"
+                    style="margin: 0 auto; background-color: #ffffff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+
+                    <!-- Header -->
+                    <tr>
+                        <td class="header-padding"
+                            style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 32px; text-align: center;">
+                            <img src="{{logoUrl}}" alt="Ooryxx" height="40" style="height: 40px; max-width: 150px;">
+                            <h1 class="title-mobile"
+                                style="color: #ffffff; margin: 16px 0 0; font-size: 28px; font-weight: 700;">📬
+                                Newsletter</h1>
+                            <p class="subtitle-mobile"
+                                style="color: rgba(255,255,255,0.9); margin: 8px 0 0; font-size: 16px;">
+                                {{newsletterDate}}</p>
+                        </td>
+                    </tr>
+
+                    <!-- Greeting -->
+                    <tr>
+                        <td class="content-padding" style="padding: 32px 32px 0;">
+                            <p class="font-mobile"
+                                style="color: #374151; font-size: 16px; line-height: 1.6; margin: 0;">
+                                Bonjour <strong>{{name}}</strong> 👋
+                            </p>
+                            <p class="font-mobile"
+                                style="color: #6b7280; font-size: 15px; line-height: 1.6; margin: 16px 0 0;">
+                                Découvrez les dernières actualités et nouveautés de notre boutique !
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!-- Main Content -->
+                    <tr>
+                        <td class="content-padding" style="padding: 32px;">
+                            <h2
+                                style="color: #1f2937; font-size: 20px; margin: 0 0 16px; border-bottom: 2px solid #10b981; padding-bottom: 8px;">
+                                {{subject}}
+                            </h2>
+                            <div class="font-mobile" style="color: #4b5563; font-size: 15px; line-height: 1.7;">
+                                {{content}}
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Featured Products -->
+                    {{#if featuredProducts}}
+                    <tr>
+                        <td class="content-padding" style="padding: 0 32px 32px;">
+                            <h3 style="color: #1f2937; font-size: 18px; margin: 0 0 20px;">🌟 Produits à la une</h3>
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    {{#each featuredProducts}}
+                                    <td class="product-col stack-column-center"
+                                        style="width: 33.33%; padding: 8px; text-align: center; vertical-align: top;">
+                                        <a href="{{productUrl}}" style="text-decoration: none;">
+                                            <img src="{{image}}" alt="{{title}}"
+                                                style="width: 100%; max-width: 160px; border-radius: 12px; margin-bottom: 12px;">
+                                            <p style="color: #374151; font-size: 14px; font-weight: 600; margin: 0;">
+                                                {{title}}</p>
+                                            <p
+                                                style="color: #10b981; font-size: 16px; font-weight: 700; margin: 4px 0;">
+                                                {{price}} TND</p>
+                                        </a>
+                                    </td>
+                                    {{/each}}
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    {{/if}}
+
+                    <!-- CTA -->
+                    <tr>
+                        <td class="content-padding" style="padding: 0 32px 32px; text-align: center;">
+                            <a href="{{ctaLink}}" class="btn-full"
+                                style="display: inline-block; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: #ffffff; text-decoration: none; padding: 16px 40px; border-radius: 12px; font-size: 16px; font-weight: 600; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);">
+                                {{ctaText}}
+                            </a>
+                        </td>
+                    </tr>
+
+                    <!-- Social Links -->
+                    <tr>
+                        <td style="background-color: #f0fdf4; padding: 24px 32px; text-align: center;">
+                            <p style="color: #374151; font-size: 14px; margin: 0 0 16px;">Suivez-nous sur les réseaux
+                                sociaux</p>
+                            <table role="presentation" cellpadding="0" cellspacing="0" style="margin: 0 auto;">
+                                <tr>
+                                    <td style="padding: 0 8px;">
+                                        <a href="{{facebookUrl}}">
+                                            <img class="social-icon"
+                                                src="https://cdn-icons-png.flaticon.com/32/733/733547.png"
+                                                alt="Facebook" width="32" height="32"
+                                                style="width: 32px; height: 32px;">
+                                        </a>
+                                    </td>
+                                    <td style="padding: 0 8px;">
+                                        <a href="{{instagramUrl}}">
+                                            <img class="social-icon"
+                                                src="https://cdn-icons-png.flaticon.com/32/2111/2111463.png"
+                                                alt="Instagram" width="32" height="32"
+                                                style="width: 32px; height: 32px;">
+                                        </a>
+                                    </td>
+                                    <td style="padding: 0 8px;">
+                                        <a href="{{twitterUrl}}">
+                                            <img class="social-icon"
+                                                src="https://cdn-icons-png.flaticon.com/32/733/733579.png" alt="Twitter"
+                                                width="32" height="32" style="width: 32px; height: 32px;">
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Footer -->
+                    <tr>
+                        <td class="content-padding"
+                            style="background-color: #f9fafb; padding: 24px 32px; border-top: 1px solid #e5e7eb;">
+                            <p
+                                style="color: #9ca3af; font-size: 12px; line-height: 1.6; margin: 0; text-align: center;">
+                                Vous recevez cet email car vous êtes inscrit à notre newsletter.<br>
+                                <a href="{{unsubscribeUrl}}" style="color: #10b981; text-decoration: underline;">Se
+                                    désabonner</a> •
+                                <a href="{{preferencesUrl}}" style="color: #10b981; text-decoration: underline;">Gérer
+                                    mes préférences</a>
+                            </p>
+                            <p style="color: #9ca3af; font-size: 12px; margin: 16px 0 0; text-align: center;">
+                                © {{year}} Ooryxx. Tous droits réservés.
+                            </p>
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

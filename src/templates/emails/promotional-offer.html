@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Offre Spéciale Ooryxx</title>
+    <style type="text/css">
+        /* Reset */
+        body,
+        table,
+        td,
+        p,
+        a,
+        li,
+        blockquote {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        table,
+        td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        img {
+            -ms-interpolation-mode: bicubic;
+            border: 0;
+            height: auto;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+        }
+
+        body {
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+            background-color: #f5f5f5;
+        }
+
+        /* Responsive */
+        @media only screen and (max-width: 620px) {
+            .email-container {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+            .fluid {
+                width: 100% !important;
+                max-width: 100% !important;
+                height: auto !important;
+            }
+
+            .stack-column {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+            .padding-mobile {
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+            }
+
+            .header-padding {
+                padding: 24px 20px !important;
+            }
+
+            .content-padding {
+                padding: 24px 20px !important;
+            }
+
+            .product-col {
+                width: 50% !important;
+                display: inline-block !important;
+                vertical-align: top !important;
+            }
+
+            .timer-box {
+                min-width: 40px !important;
+                padding: 10px 12px !important;
+            }
+
+            .timer-number {
+                font-size: 22px !important;
+            }
+
+            .timer-label {
+                font-size: 9px !important;
+            }
+
+            .timer-separator {
+                font-size: 20px !important;
+            }
+
+            .discount-title {
+                font-size: 28px !important;
+            }
+
+            .btn-full {
+                display: block !important;
+                width: 100% !important;
+                text-align: center !important;
+            }
+
+            .font-mobile {
+                font-size: 14px !important;
+                line-height: 22px !important;
+            }
+
+            .promo-code {
+                font-size: 24px !important;
+                letter-spacing: 2px !important;
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            .header-padding {
+                padding: 20px 16px !important;
+            }
+
+            .content-padding {
+                padding: 20px 16px !important;
+            }
+
+            .product-col {
+                width: 100% !important;
+                display: block !important;
+                padding: 8px 0 !important;
+            }
+
+            .timer-box {
+                min-width: 36px !important;
+                padding: 8px 10px !important;
+            }
+
+            .timer-number {
+                font-size: 18px !important;
+            }
+
+            .timer-separator {
+                font-size: 16px !important;
+            }
+
+            .discount-title {
+                font-size: 24px !important;
+            }
+
+            .promo-code {
+                font-size: 20px !important;
+                letter-spacing: 1px !important;
+            }
+
+            .offer-badge {
+                padding: 6px 14px !important;
+                font-size: 12px !important;
+            }
+        }
+    </style>
+</head>
+
+<body
+    style="margin: 0; padding: 0; background-color: #f5f5f5; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;">
+
+    <!-- Preview text -->
+    <div style="display: none; max-height: 0; overflow: hidden;">
+        🔥 {{discountValue}}% de réduction - {{offerTitle}} - Offre limitée !
+    </div>
+
+    <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color: #f5f5f5;">
+        <tr>
+            <td align="center" style="padding: 40px 16px;">
+
+                <table role="presentation" cellpadding="0" cellspacing="0" width="600" class="email-container"
+                    style="margin: 0 auto; background-color: #ffffff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+
+                    <!-- Header -->
+                    <tr>
+                        <td class="header-padding"
+                            style="background: linear-gradient(135deg, #f97316 0%, #dc2626 50%, #be123c 100%); padding: 40px 32px; text-align: center;">
+                            <img src="{{logoUrl}}" alt="Ooryxx" height="40" style="height: 40px; max-width: 150px;">
+                            <div class="offer-badge"
+                                style="background-color: rgba(255,255,255,0.2); border-radius: 50px; display: inline-block; padding: 8px 20px; margin-top: 20px;">
+                                <span style="color: #ffffff; font-size: 14px; font-weight: 600;">🔥 OFFRE LIMITÉE</span>
+                            </div>
+                            <h1 class="discount-title"
+                                style="color: #ffffff; margin: 20px 0 0; font-size: 36px; font-weight: 800;">
+                                {{discountValue}}% DE RÉDUCTION</h1>
+                            <p style="color: rgba(255,255,255,0.9); margin: 12px 0 0; font-size: 18px;">{{offerTitle}}
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!-- Countdown Timer -->
+                    <tr>
+                        <td class="content-padding"
+                            style="background-color: #1f2937; padding: 20px 32px; text-align: center;">
+                            <p
+                                style="color: #f97316; font-size: 14px; text-transform: uppercase; letter-spacing: 2px; margin: 0 0 12px;">
+                                ⏰ L'offre expire dans</p>
+                            <table role="presentation" cellpadding="0" cellspacing="0" style="margin: 0 auto;">
+                                <tr>
+                                    <td style="padding: 0 4px; text-align: center;">
+                                        <div class="timer-box"
+                                            style="background-color: #374151; border-radius: 8px; padding: 12px 16px; min-width: 50px;">
+                                            <span class="timer-number"
+                                                style="color: #ffffff; font-size: 28px; font-weight: 700; display: block;">{{days}}</span>
+                                        </div>
+                                        <p class="timer-label"
+                                            style="color: #9ca3af; font-size: 11px; margin: 8px 0 0;">JOURS</p>
+                                    </td>
+                                    <td class="timer-separator"
+                                        style="color: #f97316; font-size: 24px; font-weight: bold; padding: 0 2px;">:
+                                    </td>
+                                    <td style="padding: 0 4px; text-align: center;">
+                                        <div class="timer-box"
+                                            style="background-color: #374151; border-radius: 8px; padding: 12px 16px; min-width: 50px;">
+                                            <span class="timer-number"
+                                                style="color: #ffffff; font-size: 28px; font-weight: 700; display: block;">{{hours}}</span>
+                                        </div>
+                                        <p class="timer-label"
+                                            style="color: #9ca3af; font-size: 11px; margin: 8px 0 0;">HEURES</p>
+                                    </td>
+                                    <td class="timer-separator"
+                                        style="color: #f97316; font-size: 24px; font-weight: bold; padding: 0 2px;">:
+                                    </td>
+                                    <td style="padding: 0 4px; text-align: center;">
+                                        <div class="timer-box"
+                                            style="background-color: #374151; border-radius: 8px; padding: 12px 16px; min-width: 50px;">
+                                            <span class="timer-number"
+                                                style="color: #ffffff; font-size: 28px; font-weight: 700; display: block;">{{minutes}}</span>
+                                        </div>
+                                        <p class="timer-label"
+                                            style="color: #9ca3af; font-size: 11px; margin: 8px 0 0;">MIN</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Greeting & Description -->
+                    <tr>
+                        <td class="content-padding" style="padding: 32px;">
+                            <p class="font-mobile"
+                                style="color: #374151; font-size: 16px; line-height: 1.6; margin: 0;">
+                                Bonjour <strong>{{name}}</strong> 👋
+                            </p>
+                            <p class="font-mobile"
+                                style="color: #6b7280; font-size: 15px; line-height: 1.7; margin: 16px 0 0;">
+                                {{offerDescription}}
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!-- Promo Code Box -->
+                    <tr>
+                        <td class="content-padding" style="padding: 0 32px 32px;">
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td
+                                        style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border: 2px dashed #f59e0b; border-radius: 12px; padding: 24px; text-align: center;">
+                                        <p style="color: #92400e; font-size: 14px; margin: 0 0 8px;">Utilisez le code
+                                            promo</p>
+                                        <p class="promo-code"
+                                            style="color: #1f2937; font-size: 32px; font-weight: 800; font-family: monospace; margin: 0; letter-spacing: 4px;">
+                                            {{promoCode}}</p>
+                                        <p style="color: #92400e; font-size: 13px; margin: 12px 0 0;">Valable jusqu'au
+                                            {{expiryDate}}</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Featured Products -->
+                    {{#if products}}
+                    <tr>
+                        <td class="content-padding" style="padding: 0 32px 32px;">
+                            <h3 style="color: #1f2937; font-size: 18px; margin: 0 0 20px;">🛍️ Profitez de ces produits
+                            </h3>
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    {{#each products}}
+                                    <td class="product-col"
+                                        style="width: 33.33%; padding: 8px; text-align: center; vertical-align: top;">
+                                        <a href="{{productUrl}}" style="text-decoration: none;">
+                                            <div style="position: relative; display: inline-block;">
+                                                <img src="{{image}}" alt="{{title}}"
+                                                    style="width: 100%; max-width: 160px; border-radius: 12px; margin-bottom: 12px;">
+                                            </div>
+                                            <p style="color: #374151; font-size: 14px; font-weight: 600; margin: 0;">
+                                                {{title}}</p>
+                                            <p
+                                                style="color: #9ca3af; font-size: 14px; text-decoration: line-through; margin: 4px 0 0;">
+                                                {{originalPrice}} TND</p>
+                                            <p
+                                                style="color: #dc2626; font-size: 18px; font-weight: 700; margin: 4px 0;">
+                                                {{discountedPrice}} TND</p>
+                                        </a>
+                                    </td>
+                                    {{/each}}
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    {{/if}}
+
+                    <!-- CTA -->
+                    <tr>
+                        <td class="content-padding" style="padding: 0 32px 40px; text-align: center;">
+                            <a href="{{shopLink}}" class="btn-full"
+                                style="display: inline-block; background: linear-gradient(135deg, #f97316 0%, #dc2626 100%); color: #ffffff; text-decoration: none; padding: 18px 48px; border-radius: 12px; font-size: 18px; font-weight: 700; box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4);">
+                                🛒 J'EN PROFITE MAINTENANT
+                            </a>
+                        </td>
+                    </tr>
+
+                    <!-- Footer -->
+                    <tr>
+                        <td class="content-padding"
+                            style="background-color: #f9fafb; padding: 24px 32px; border-top: 1px solid #e5e7eb;">
+                            <p
+                                style="color: #9ca3af; font-size: 12px; line-height: 1.6; margin: 0; text-align: center;">
+                                *Offre valable sur une sélection de produits. Non cumulable avec d'autres
+                                promotions.<br>
+                                <a href="{{termsUrl}}" style="color: #f97316; text-decoration: underline;">Conditions
+                                    générales</a>
+                            </p>
+                            <p style="color: #9ca3af; font-size: 12px; margin: 16px 0 0; text-align: center;">
+                                © {{year}} Ooryxx. Tous droits réservés.<br>
+                                <a href="{{unsubscribeUrl}}" style="color: #9ca3af; text-decoration: underline;">Se
+                                    désabonner</a>
+                            </p>
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

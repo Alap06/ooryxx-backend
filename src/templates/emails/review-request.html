@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Donnez votre avis</title>
+    <style type="text/css">
+        /* Reset */
+        body,
+        table,
+        td,
+        p,
+        a,
+        li,
+        blockquote {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        table,
+        td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        img {
+            -ms-interpolation-mode: bicubic;
+            border: 0;
+            height: auto;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+        }
+
+        body {
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+            background-color: #f5f5f5;
+        }
+
+        /* Responsive */
+        @media only screen and (max-width: 620px) {
+            .email-container {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+            .fluid {
+                width: 100% !important;
+                max-width: 100% !important;
+                height: auto !important;
+            }
+
+            .stack-column {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+            .padding-mobile {
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+            }
+
+            .header-padding {
+                padding: 24px 20px !important;
+            }
+
+            .content-padding {
+                padding: 24px 20px !important;
+            }
+
+            .product-img {
+                width: 80px !important;
+                height: 80px !important;
+            }
+
+            .product-info {
+                padding-left: 16px !important;
+            }
+
+            .btn-full {
+                display: block !important;
+                width: 100% !important;
+                text-align: center !important;
+            }
+
+            .font-mobile {
+                font-size: 14px !important;
+                line-height: 22px !important;
+            }
+
+            .title-mobile {
+                font-size: 20px !important;
+            }
+
+            .star-size {
+                font-size: 28px !important;
+                padding: 4px !important;
+            }
+
+            .other-product {
+                width: 25% !important;
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            .header-padding {
+                padding: 20px 16px !important;
+            }
+
+            .content-padding {
+                padding: 20px 16px !important;
+            }
+
+            .product-img {
+                width: 70px !important;
+                height: 70px !important;
+            }
+
+            .product-row {
+                display: block !important;
+            }
+
+            .product-row td {
+                display: block !important;
+                width: 100% !important;
+                text-align: center !important;
+                padding: 0 !important;
+            }
+
+            .product-info {
+                padding-left: 0 !important;
+                padding-top: 12px !important;
+            }
+
+            .star-size {
+                font-size: 24px !important;
+                padding: 2px !important;
+            }
+
+            .other-product {
+                width: 50% !important;
+                display: inline-block !important;
+            }
+
+            .other-product-img {
+                width: 60px !important;
+                height: 60px !important;
+            }
+        }
+    </style>
+</head>
+
+<body
+    style="margin: 0; padding: 0; background-color: #f5f5f5; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;">
+
+    <!-- Preview text -->
+    <div style="display: none; max-height: 0; overflow: hidden;">
+        ⭐ Donnez votre avis sur votre récent achat - Ooryxx
+    </div>
+
+    <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color: #f5f5f5;">
+        <tr>
+            <td align="center" style="padding: 40px 16px;">
+
+                <table role="presentation" cellpadding="0" cellspacing="0" width="600" class="email-container"
+                    style="margin: 0 auto; background-color: #ffffff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+
+                    <!-- Header -->
+                    <tr>
+                        <td class="header-padding"
+                            style="background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%); padding: 32px; text-align: center;">
+                            <img src="{{logoUrl}}" alt="Ooryxx" height="40" style="height: 40px; max-width: 150px;">
+                            <h1 class="title-mobile"
+                                style="color: #ffffff; margin: 16px 0 0; font-size: 24px; font-weight: 600;">⭐ Votre
+                                avis compte !</h1>
+                        </td>
+                    </tr>
+
+                    <!-- Greeting -->
+                    <tr>
+                        <td class="content-padding" style="padding: 32px 32px 0;">
+                            <p class="font-mobile"
+                                style="color: #374151; font-size: 16px; line-height: 1.6; margin: 0;">
+                                Bonjour <strong>{{name}}</strong>,
+                            </p>
+                            <p class="font-mobile"
+                                style="color: #6b7280; font-size: 15px; line-height: 1.7; margin: 16px 0 0;">
+                                Vous avez récemment reçu votre commande <strong>#{{orderNumber}}</strong>. Nous espérons
+                                que vous êtes satisfait(e) de vos achats !
+                            </p>
+                            <p class="font-mobile"
+                                style="color: #6b7280; font-size: 15px; line-height: 1.7; margin: 16px 0 0;">
+                                Prenez quelques secondes pour partager votre expérience et aider d'autres clients à
+                                faire leur choix.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!-- Product to Review -->
+                    <tr>
+                        <td class="content-padding" style="padding: 32px;">
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%"
+                                style="background-color: #f9fafb; border-radius: 12px; padding: 24px;">
+                                <tr class="product-row">
+                                    <td style="width: 100px; vertical-align: top; padding: 16px;">
+                                        <img class="product-img" src="{{productImage}}" alt="{{productTitle}}"
+                                            style="width: 100px; height: 100px; object-fit: cover; border-radius: 8px;">
+                                    </td>
+                                    <td class="product-info" style="padding: 16px; vertical-align: top;">
+                                        <p style="color: #1f2937; font-size: 18px; font-weight: 600; margin: 0;">
+                                            {{productTitle}}</p>
+                                        <p style="color: #6b7280; font-size: 14px; margin: 8px 0 0;">{{productVariant}}
+                                        </p>
+                                        <p style="color: #8b5cf6; font-size: 16px; font-weight: 600; margin: 8px 0 0;">
+                                            {{productPrice}} TND</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Star Rating -->
+                    <tr>
+                        <td class="content-padding" style="padding: 0 32px; text-align: center;">
+                            <p style="color: #374151; font-size: 16px; margin: 0 0 16px;">Comment évaluez-vous ce
+                                produit ?</p>
+                            <table role="presentation" cellpadding="0" cellspacing="0" style="margin: 0 auto;">
+                                <tr>
+                                    <td><a href="{{reviewLink}}?rating=1" class="star-size"
+                                            style="text-decoration: none; padding: 8px; font-size: 36px; display: inline-block;">⭐</a>
+                                    </td>
+                                    <td><a href="{{reviewLink}}?rating=2" class="star-size"
+                                            style="text-decoration: none; padding: 8px; font-size: 36px; display: inline-block;">⭐</a>
+                                    </td>
+                                    <td><a href="{{reviewLink}}?rating=3" class="star-size"
+                                            style="text-decoration: none; padding: 8px; font-size: 36px; display: inline-block;">⭐</a>
+                                    </td>
+                                    <td><a href="{{reviewLink}}?rating=4" class="star-size"
+                                            style="text-decoration: none; padding: 8px; font-size: 36px; display: inline-block;">⭐</a>
+                                    </td>
+                                    <td><a href="{{reviewLink}}?rating=5" class="star-size"
+                                            style="text-decoration: none; padding: 8px; font-size: 36px; display: inline-block;">⭐</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <p style="color: #9ca3af; font-size: 13px; margin: 8px 0 0;">Cliquez sur une étoile pour
+                                noter</p>
+                        </td>
+                    </tr>
+
+                    <!-- CTA Button -->
+                    <tr>
+                        <td class="content-padding" style="padding: 32px; text-align: center;">
+                            <a href="{{reviewLink}}" class="btn-full"
+                                style="display: inline-block; background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%); color: #ffffff; text-decoration: none; padding: 16px 40px; border-radius: 12px; font-size: 16px; font-weight: 600; box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);">
+                                ✍️ Écrire un avis détaillé
+                            </a>
+                        </td>
+                    </tr>
+
+                    <!-- Reward Info -->
+                    <tr>
+                        <td class="content-padding" style="padding: 0 32px 32px;">
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td
+                                        style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-radius: 12px; padding: 20px; text-align: center;">
+                                        <p class="font-mobile" style="color: #92400e; font-size: 14px; margin: 0;">
+                                            🎁 <strong>Bonus :</strong> Recevez <strong>50 points de fidélité</strong>
+                                            en laissant un avis avec photo !
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Other Products -->
+                    {{#if otherProducts}}
+                    <tr>
+                        <td class="content-padding" style="padding: 0 32px 32px;">
+                            <p style="color: #374151; font-size: 14px; margin: 0 0 16px;">Autres produits de votre
+                                commande :</p>
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    {{#each otherProducts}}
+                                    <td class="other-product" style="width: 25%; padding: 8px; text-align: center;">
+                                        <a href="{{reviewLink}}" style="text-decoration: none;">
+                                            <img class="other-product-img" src="{{image}}" alt="{{title}}"
+                                                style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px;">
+                                            <p style="color: #6b7280; font-size: 12px; margin: 8px 0 0;">Donner un avis
+                                            </p>
+                                        </a>
+                                    </td>
+                                    {{/each}}
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    {{/if}}
+
+                    <!-- Footer -->
+                    <tr>
+                        <td class="content-padding"
+                            style="background-color: #f9fafb; padding: 24px 32px; border-top: 1px solid #e5e7eb;">
+                            <p
+                                style="color: #9ca3af; font-size: 13px; line-height: 1.6; margin: 0; text-align: center;">
+                                Merci de faire partie de la communauté Ooryxx ! 💜<br>
+                                <a href="{{helpUrl}}" style="color: #8b5cf6; text-decoration: none;">Besoin d'aide ?</a>
+                                •
+                                <a href="{{ordersUrl}}" style="color: #8b5cf6; text-decoration: none;">Mes commandes</a>
+                            </p>
+                            <p style="color: #9ca3af; font-size: 12px; margin: 16px 0 0; text-align: center;">
+                                © {{year}} Ooryxx. Tous droits réservés.
+                            </p>
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
